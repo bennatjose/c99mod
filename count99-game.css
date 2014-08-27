@@ -39,13 +39,12 @@ body{
 }
 
 #gameover-win.gameover-appear {
-  top: 30%;
-  left:30%;
-   margin-top: -50px;
-    margin-left: -50px;
+ top:50%;
+  margin-left: auto;
+     margin-right: auto;
+    width: 70%;
   background:white;
-  width:inherit;
-  height:inherit;
+
   -webkit-transition: top .3s ease-out;
   -moz-transition: top .3s ease-out;
   transition: top .3s ease-out;
