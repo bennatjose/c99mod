@@ -100,10 +100,11 @@ c99.Game = (function() {
   p.gameOver = function() {
     // force the next count to be the total tiles maximum.
     this.nextCount = this.totalTiles;
-
+    this.hud = document.getElementById('hud');
     // display the game over scene.
     var gameoverScene = document.getElementById('gameover-win');
     gameoverScene.classList.add('gameover-appear');
+    this.hud.remove();
   }
 
   return Count99Game;
