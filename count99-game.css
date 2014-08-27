@@ -41,6 +41,8 @@ body{
 #gameover-win.gameover-appear {
   top: 30%;
   left:30%;
+   margin-top: -50px;
+    margin-left: -50px;
   background:white;
   width:inherit;
   height:inherit;
