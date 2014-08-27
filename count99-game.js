@@ -37,8 +37,7 @@ c99.Game = (function() {
     console.log("Count99 game starts.");
 
     this.canvas = document.getElementById('game-canvas');
-    canvas.width=windows.Width;
-    canvas.height=windows.Height;
+
     // EaselJS Stage
     this.stage = new createjs.Stage(this.canvas);
 
