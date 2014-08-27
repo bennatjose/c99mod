@@ -17,13 +17,19 @@ body{
   color: #ac1000;
   background: #efefef;
 }
+#hud.invisible {
+  position: absolute;
+  top:-320px;
+  left: 0;
+  padding: 8px 12px;
+  color: #ac1000;
+  background: #efefef;
+}
 
 #gameover-win {
   position: absolute;
   top: -320px;
   left: 0;
-  width: 480px;
-  height: 270px;
   background: white;
   text-align: center;
   padding-top: 50px;
@@ -33,7 +39,9 @@ body{
 #gameover-win.gameover-appear {
   top: 30%;
   left:30%;
-  
+  background:white;
+  width:inherit;
+  height:inherit;
   -webkit-transition: top .3s ease-out;
   -moz-transition: top .3s ease-out;
   transition: top .3s ease-out;

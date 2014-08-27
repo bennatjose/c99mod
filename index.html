@@ -9,11 +9,17 @@
 <body>
 
   <div id='game'>
-    <canvas id='game-canvas' width='480' height='320'></canvas>
+    <canvas id='game-canvas' width='' height=''></canvas>
     <script>
     var gc = document.getElementById("game-canvas");
-    gc.width=window.innerWidth;
-    gc.height=window.innerHeight;
+   wwidth=window.innerWidth;
+    wheight = window.innerHeight;
+    gc.width = wwidth;
+    gc.height = wheight;
+    var gow = document.getElementById("gameover-win");
+    gow.width = wwidth;
+    gow.height = wheight;
+  
     </script>
     <div id='hud'>
       next: <span id='next-count'>1</span>

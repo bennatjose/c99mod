@@ -31,11 +31,12 @@ c99.Tile = (function(){
   return Tile;
 })();
 
-c99.Game = (function() {
+c99.Game = (function () {
+    var nextCountLabel = document.getElementById('next-count');
   // constructor
   function Count99Game() {
     console.log("Count99 game starts.");
-
+   
     this.canvas = document.getElementById('game-canvas');
 
     // EaselJS Stage
@@ -47,9 +48,11 @@ c99.Game = (function() {
     restartButton.onclick = (function(event) {
       var gameoverScene = document.getElementById('gameover-win');
       gameoverScene.classList.remove('gameover-appear');
-       var hud = document.getElementById('hud');
-    this.addChild('hud');
+      var hud = document.getElementById('hud');
+      hud.classList.remove('invisible');
+      this.stage.update();
       this.initGame();
+      nextCountLabel.innerText = 1;
     }).bind(this);
   }
 
@@ -64,7 +67,7 @@ c99.Game = (function() {
     // we have a <span> in the HTML that display the nextCount variable.
     // We can store the reference of that element
     // so we can access later without finding it again.
-    this.nextCountLabel = document.getElementById('next-count');
+  
 
     // the onPress event handler for tile
     var tileOnPress = function(event) {
@@ -82,7 +85,7 @@ c99.Game = (function() {
         // update the canvas to reflect the new display list.
         this.stage.update();
         // update the <span id='next-count'> element
-        this.nextCountLabel.innerText = this.nextCount;
+       nextCountLabel.innerText = this.nextCount;
 
       }
     }
@@ -101,12 +104,14 @@ c99.Game = (function() {
   p.gameOver = function() {
     // force the next count to be the total tiles maximum.
     this.nextCount = this.totalTiles;
-    this.hud = document.getElementById('hud');
+ 
     // display the game over scene.
     var gameoverScene = document.getElementById('gameover-win');
     gameoverScene.classList.add('gameover-appear');
-    this.hud = document.getElementById('hud');
-    this.hud.remove();
+   
+    var hud = document.getElementById('hud');
+    hud.classList.add('invisible');
+
   }
 
   return Count99Game;
