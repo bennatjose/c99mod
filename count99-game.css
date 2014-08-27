@@ -31,7 +31,7 @@ body{
 }
 
 #gameover-win.gameover-appear {
-  top: 50%;
+  top: 30%;
   left:30%;
   
   -webkit-transition: top .3s ease-out;
