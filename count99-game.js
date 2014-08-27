@@ -48,7 +48,7 @@ c99.Game = (function() {
       var gameoverScene = document.getElementById('gameover-win');
       gameoverScene.classList.remove('gameover-appear');
        this.hud = document.getElementById('hud');
-    this.addChild('hud');
+    this.addChild(this.hud);
       this.initGame();
     }).bind(this);
   }
