@@ -47,8 +47,8 @@ c99.Game = (function() {
     restartButton.onclick = (function(event) {
       var gameoverScene = document.getElementById('gameover-win');
       gameoverScene.classList.remove('gameover-appear');
-       this.hud = document.getElementById('hud');
-    this.addChild(this.hud);
+       var hud = document.getElementById('hud');
+    this.addChild('hud');
       this.initGame();
     }).bind(this);
   }
