@@ -8,13 +8,7 @@ body{
   margin: auto;
 }
 
-#game {
-  
-  border: 1px solid black;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-}
+
 
 #hud {
   position: absolute;
