@@ -1,27 +1,35 @@
-<html>
+
+<!DOCTYPE html>
+<html lang='en'>
 <head>
-<title>c99</title>
+  <meta charset='utf-8'>
+  <title>c99 mod</title>
+  <link rel="stylesheet" href="count99-game.css">
 </head>
 <body>
-   <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '{1455271564741165}',
-          xfbml      : true,
-          version    : 'v2.0'
-        });
-      };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+  <div id='game'>
+    <canvas id='game-canvas' width='' height=''></canvas>
+    <script>
+    var gc = document.getElementById("game-canvas");
+   wwidth=window.innerWidth;
+    wheight = window.innerHeight;
+    gc.width = wwidth;
+    gc.height = wheight;
+   
+  
     </script>
+    <div id='hud'>
+      next: <span id='next-count'>1</span>
+    </div>
+    <div id='gameover-win'>
+      <p>Congratulations!</p>
+      <p>You Won!</p>
+      <p><a href='#' id='restart-button'>Restart Game</a></p>
+    </div>
+  </div>
 
-
-<div class="fb-login-button" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+  <script type="text/javascript" src='easeljs-0.5.0.min.js'></script>
+  <script type="text/javascript" src='count99-game.js'></script>
 </body>
-<html>
+</html>
