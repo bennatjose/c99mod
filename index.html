@@ -1,54 +1,19 @@
+<html>
+    <head>
+    <title>c99 mod</title>
+    </head>
 <body>
-<div id="fb-root"></div>
-<script>
-window.fbAsyncInit = function() {
-// init the Facebook JavaScript SDK
-    FB.init({
-        appId       : '1455271564741165',
-        channelUrl  : null,
-        status      : true,
-        cookie      : false,
-        xfbml       : false
-    });
-
-    FB.getLoginStatus(function(response) {
-        if (response.status === 'connected') {
-            testAPI();  // connected
-        } else if (response.status === 'not_authorized') {
-            // not authorized
-            login();
-        } else {
-            // not_logged_in
-            login();
-        }
-    });
-};
-
-function login() {
-    FB.login(function(response) {
-        if (response.authResponse) {
-            // connected
-            testAPI();
-        } else {
-            // cancelled
-        }
-    });
-}
-
-function testAPI() {
-    console.log('Welcome!  Fetching your information... ');
-    FB.api('/me', function(response) {
-        console.log('Good to see you, ' + response.name + '.');
-    });
-}
-
-(function(d){
-    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement('script'); js.id = id; js.async = true;
-    js.src = "//connect.facebook.net/en_US/all.js";
-    ref.parentNode.insertBefore(js, ref);
-}(document));
-</script>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=1455271564741165&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+    
 </body>
+    
+    
 </html>
