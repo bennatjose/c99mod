@@ -33,6 +33,7 @@ c99.Tile = (function(){
 
 c99.Game = (function () {
     var nextCountLabel = document.getElementById('next-count');
+    var timer = document.getElementById('time');
   // constructor
   function Count99Game() {
     console.log("Count99 game starts.");
@@ -53,6 +54,10 @@ c99.Game = (function () {
       this.stage.update();
       this.initGame();
       nextCountLabel.innerText = 1;
+      this.nextTime = 1;
+      
+      setInterval(function () {this.nextTime++}, 1000);
+      this.nextTime
     }).bind(this);
   }
 
