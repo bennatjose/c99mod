@@ -57,7 +57,7 @@ c99.Game = (function () {
       this.nextTime = 1;
       
       setInterval(function () {this.nextTime++}, 1000);
-      this.nextTime
+      timer.innerHtml=this.nextTime;
     }).bind(this);
   }
 
