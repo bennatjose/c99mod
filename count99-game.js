@@ -54,6 +54,7 @@ c99.Game = (function () {
       this.stage.update();
       this.initGame();
       nextCountLabel.innerText = 1;
+      timer.innerText=0;
       setInterval(function(){timer.innerText++},1000);
     }).bind(this);
   }
@@ -65,7 +66,7 @@ c99.Game = (function () {
 
     // store which number player should click on next tile.
     this.nextCount = 1;
-
+ setInterval(function(){timer.innerText++},1000);
     // we have a <span> in the HTML that display the nextCount variable.
     // We can store the reference of that element
     // so we can access later without finding it again.
