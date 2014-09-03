@@ -54,7 +54,7 @@ c99.Game = (function () {
       this.stage.update();
       this.initGame();
       nextCountLabel.innerText = 1;
-      setInterval(function(){timer.innerText=timer.innerText+1},1000);
+      setInterval(function(){timer.innerText=timer.value+1},1000);
     }).bind(this);
   }
 
