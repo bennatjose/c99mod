@@ -54,7 +54,7 @@ c99.Game = (function () {
       this.stage.update();
       this.initGame();
       nextCountLabel.innerText = 1;
-      
+      setInterval(function(){timer.innerText=1++},1000;
     }).bind(this);
   }
 
@@ -70,10 +70,8 @@ c99.Game = (function () {
     // We can store the reference of that element
     // so we can access later without finding it again.
   
-      this.nextTime = 1;
         
-      setInterval(function () {this.nextTime++}, 1000);
-      timer.innerHtml=this.nextTime;
+
     // the onPress event handler for tile
     var tileOnPress = function(event) {
       if (event.target.number === this.nextCount) {
