@@ -17,8 +17,8 @@ function onLogin(response) {
   if (response.status == 'connected') {
     FB.api('/me?fields=first_name', function(data) {
       var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-      <a href="game.html">PLAY</a>
+      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!'+ <br/> + <a href="game.html">PLAY</a> ;
+      
     });
   }
 }
