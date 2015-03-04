@@ -48,7 +48,9 @@ c99.Game = (function () {
     var restartButton = document.getElementById('restart-button');
     restartButton.onclick = (function(event) {
       var gameoverScene = document.getElementById('gameover-win');
+      var gameoverFailScene=document.getElementById('gameover-fail');
       gameoverScene.classList.remove('gameover-appear');
+      gameoverFailScene.classList.remove('gameover-appear');
       var hud = document.getElementById('hud');
       hud.classList.remove('invisible');
       this.stage.update();
@@ -87,7 +89,7 @@ c99.Game = (function () {
           }
           
           if(timer.innerText===0){
-            this.gameOver();
+            this.gameOverFail();
             
           }
         
@@ -118,13 +120,23 @@ c99.Game = (function () {
     // display the game over scene.
     var gameoverScene = document.getElementById('gameover-win');
     gameoverScene.classList.add('gameover-appear');
-    var gameoverScene = document.getElementById('gameover-fail');
-    gameoverScene.classList.add('gameover-appear');
+    
     var hud = document.getElementById('hud');
     hud.classList.add('invisible');
 
   }
+p.gameOverFail = function() {
+    // force the next count to be the total tiles maximum.
+    this.nextCount = this.totalTiles;
+ 
+    // display the game over scene.
+    var gameoverScene = document.getElementById('gameover-fail');
+    gameoverScene.classList.add('gameover-appear');
+    
+    var hud = document.getElementById('hud');
+    hud.classList.add('invisible');
 
+  }
   return Count99Game;
 })();
 
