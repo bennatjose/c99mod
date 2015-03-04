@@ -62,7 +62,7 @@ c99.Game = (function () {
   var p = Count99Game.prototype;
 
   p.initGame = function() {
-    this.totalTiles = 3;
+    this.totalTiles = 99;
 
     // store which number player should click on next tile.
     this.nextCount = 1;
