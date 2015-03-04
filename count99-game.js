@@ -88,7 +88,7 @@ c99.Game = (function () {
           this.gameOver();
           }
           
-          if(timer.innerText===0){
+          if(timer.innerText==0){
             this.gameOverFail();
             
           }
