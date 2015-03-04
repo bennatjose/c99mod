@@ -66,7 +66,7 @@ c99.Game = (function () {
 
     // store which number player should click on next tile.
     this.nextCount = 1;
- setInterval(function(){timer.innerText++},2000);
+ setInterval(function(){timer.innerText--},2000);
     // we have a <span> in the HTML that display the nextCount variable.
     // We can store the reference of that element
     // so we can access later without finding it again.
@@ -84,8 +84,14 @@ c99.Game = (function () {
         // game over, player wins.
         if (this.nextCount > this.totalTiles) {
           this.gameOver();
-        }
-
+          }
+          
+          if(timer.innerText===0){
+            this.gameOver();
+            
+          }
+        
+        
         // update the canvas to reflect the new display list.
         this.stage.update();
         // update the <span id='next-count'> element
@@ -112,7 +118,8 @@ c99.Game = (function () {
     // display the game over scene.
     var gameoverScene = document.getElementById('gameover-win');
     gameoverScene.classList.add('gameover-appear');
-   
+    var gameoverScene = document.getElementById('gameover-fail');
+    gameoverScene.classList.add('gameover-appear');
     var hud = document.getElementById('hud');
     hud.classList.add('invisible');
 
